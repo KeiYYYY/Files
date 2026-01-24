@@ -1,0 +1,143 @@
+{
+  "latex-workshop.latex.recipe.default": "latexmk (XeLaTeX, PDF next to .tex)",
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.view.pdf.viewer": "tab",
+
+  "latex-workshop.latex.outDir": "%DIR%",
+
+  "latex-workshop.synctex.afterBuild.enabled": true,
+  "latex-workshop.view.pdf.internal.synctex.keybinding": "ctrl-click",
+
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk (XeLaTeX, aux->build)",
+      "command": "latexmk",
+      "args": [
+        "-xelatex",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-outdir=%OUTDIR%",
+        "-auxdir=%OUTDIR%/build",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "latexmk (pdfLaTeX, aux->build)",
+      "command": "latexmk",
+      "args": [
+        "-pdf",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-outdir=%OUTDIR%",
+        "-auxdir=%OUTDIR%/build",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "latexmk (LuaLaTeX, aux->build)",
+      "command": "latexmk",
+      "args": [
+        "-lualatex",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-outdir=%OUTDIR%",
+        "-auxdir=%OUTDIR%/build",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "latexmk (XeLaTeX + shell-escape, aux->build)",
+      "command": "latexmk",
+      "args": [
+        "-xelatex",
+        "-shell-escape",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-outdir=%OUTDIR%",
+        "-auxdir=%OUTDIR%/build",
+        "%DOC%"
+      ]
+    },
+
+    {
+      "name": "xelatex (single run, debug)",
+      "command": "xelatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "pdflatex (single run, debug)",
+      "command": "pdflatex",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "%DOC%"
+      ]
+    }
+  ],
+
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk (XeLaTeX, PDF next to .tex)",
+      "tools": ["latexmk (XeLaTeX, aux->build)"]
+    },
+    {
+      "name": "latexmk (pdfLaTeX, PDF next to .tex)",
+      "tools": ["latexmk (pdfLaTeX, aux->build)"]
+    },
+    {
+      "name": "latexmk (LuaLaTeX, PDF next to .tex)",
+      "tools": ["latexmk (LuaLaTeX, aux->build)"]
+    },
+    {
+      "name": "latexmk (XeLaTeX + shell-escape)",
+      "tools": ["latexmk (XeLaTeX + shell-escape, aux->build)"]
+    },
+
+    {
+      "name": "XeLaTeX (single run, debug)",
+      "tools": ["xelatex (single run, debug)"]
+    },
+    {
+      "name": "pdfLaTeX (single run, debug)",
+      "tools": ["pdflatex (single run, debug)"]
+    }
+  ],
+
+  "latex-workshop.latex.clean.method": "glob",
+  "latex-workshop.latex.clean.subfolder.enabled": true,
+  "latex-workshop.latex.clean.fileTypes": [
+    "*.aux",
+    "*.bbl",
+    "*.bcf",
+    "*.blg",
+    "*.fdb_latexmk",
+    "*.fls",
+    "*.log",
+    "*.out",
+    "*.run.xml",
+    "*.synctex.gz",
+    "*.toc",
+    "*.xdv",
+    "*.nav",
+    "*.snm",
+    "*.lof",
+    "*.lot"
+  ],
+  "latex-workshop.latex.autoClean.run": "never",
+
+  "latex-workshop.intellisense.package.enabled": true,
+
+  "latex-workshop.formatting.latex": "latexindent",
+
+  "editor.unicodeHighlight.nonBasicASCII": false
+}
