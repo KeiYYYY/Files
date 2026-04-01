@@ -11,3 +11,6 @@ VS Code LaTeX Workshop 配置文件 特点：
 
 ## `proxywsl.sh`
 让WSL走Windows Clash代理的一种可行配置（本人目前没用这个配置，更推荐用 `~\.wslconfig`）
+
+## 致谢
+[Linux.Do](https://linux.do/) 社区
